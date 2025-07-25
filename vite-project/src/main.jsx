@@ -2,6 +2,7 @@ import React from 'react'
 import ReactDOM from 'react-dom/client'
 import App from './App.jsx'
 import Animals from './animals.jsx'
+import Keys from './keys'
 //import Greetings from './greeting.jsx'
 /*
 function MyApp()
@@ -54,10 +55,10 @@ ReactDOM.createRoot(document.getElementById('root')).render(
 )*/
 
 
-ReactDOM.createRoot(document.getElementById('root')).render(
-
-
-  <Animals/>
-)
-
-   
+const root = ReactDOM.createRoot(document.getElementById("root"));
+root.render(
+  <React.StrictMode>
+    <Keys />
+    {/* <Animals /> */}
+  </React.StrictMode>
+);
