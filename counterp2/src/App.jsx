@@ -8,13 +8,23 @@ function App() {
  const[counter,setcounter]= useState(15)
 
 const addvalue=()=>
-{
-  console.log("value is added",counter);
+{/*
+  console.log("value is added",counter);  
   if(counter < 20 ){
  setcounter(counter +1)
   }
   else
     alert("counter cannot go above 20")
+*//*
+setcounter(counter+1)
+setcounter(counter+1)
+setcounter(counter+1)
+*/
+setcounter(prev=>prev+1)
+setcounter(prev=>prev+1)
+setcounter(prev=>prev+1)
+setcounter(prev=>prev+1)
+
 
 }
 
@@ -34,8 +44,7 @@ const removevalue=()=>
         <button onClick={addvalue} style={{ marginBottom: "10px" }}>Add value {counter}</button>
         <br/>
         <button onClick={removevalue}>remove value {counter}</button> 
-      
-           
+        
     </>
   )
 }
