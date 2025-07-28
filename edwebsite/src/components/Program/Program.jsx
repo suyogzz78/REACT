@@ -9,7 +9,7 @@ import post from '../../assets/post.webp'
 
 const Program = () => {
   return (
-    <div className="Programs">
+    <div className="Programs" id='Program'>
         <div className='program'>
             <img src={program1} alt=""/>
             <div className='anime'>

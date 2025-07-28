@@ -4,7 +4,7 @@ import play from '../../assets/play.avif'
 import './about.css'
 const about = () => {
   return (
-   <div className='about'>
+   <div className='about' id='About'>
     <div className='about-left'>
         <img src={ed2} alt='' className='about-img'/>
         <img src={play} alt='' className='about-play'/>

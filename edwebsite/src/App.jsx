@@ -1,9 +1,11 @@
-import React from 'react'
-import Navbar from './components/navbar/navbar';
+import React from 'react';
+import Navbar from './components/Navbar/Navbar';
 import Suyog from './components/Suyog/Suyog';
-import Program from './components/Program/Program'
-import Title from './components/Title/Title'
-import About from './components/about/about'
+import Program from './components/Program/Program';
+import Title from './components/Title/TItle';
+import About from './components/about/about';
+import College from './components/College/College'; 
+import Contact from './components/Contact/Contact';
 
 const App = () => {
   return (
@@ -15,6 +17,9 @@ const App = () => {
       <Program/>
       <About/>
         <Title subtitle='College Photos' title='Gallery'/>
+        <College/>
+          <Title subtitle='Contact us' title='Link together'/>
+          <Contact/>
       </div>
     </div>
   )

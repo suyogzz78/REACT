@@ -49,3 +49,11 @@ nav ul li{
     list-style: none;
     margin: 5px 45px;
 }
+@media(max-width:1200px)
+{
+  .container{
+    padding-left: 5%;
+    padding-right:5%;
+  }
+  
+}
