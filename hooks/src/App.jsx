@@ -43,6 +43,7 @@ function App() {
 
 export default App
 */
+/*
 import React, { useState } from 'react'
 
 const App = () => {
@@ -73,11 +74,84 @@ const App = () => {
       {form.name}{''}
 
       {form.surname}{''}
-      
+      z
       {form.work}
     </p>
     </>
   )
 }
 
+export default App
+*/
+/*
+import React, { useState,useEffect } from 'react'
+
+const App = () => {
+
+  const[count,setcount]=useState(0);  
+  const[text,settext]=useState('');
+
+  useEffect(()=>{
+    console.log('useeffect is running with  no dependencies')
+  })
+
+  
+return (
+  <>
+      <h1>Count is {count}</h1>
+      <button onClick={()=>{setcount(prev=>prev+1);
+       setcount(prev=>prev+1);
+       setcount(prev=>prev+1);
+       } }>Increment</button>
+  
+  </>
+)
+}
+export default App
+*/
+
+/*
+import React, { useState,useEffect } from 'react'
+
+const App = () => {
+  const  [count,setcount]=useState('')
+    useEffect(()=>{
+        console.log('the useeffect runs with empty dependencies');
+    },[] );
+
+
+  return(
+    <>
+    <h1>Counteer is {count}</h1>
+    <button onClick={()=>setcount(count+1)}>CLick me</button>
+</>
+  )
+
+}
+export default App;
+*/
+import React, { useState,useEffect } from 'react'
+
+const App = () => {
+
+  const [count,setcount]=useState(0);
+  const [text,settext]=useState('');
+
+  useEffect(()=>{
+    console.log('useeffect is running with  no dependencies');
+  },[]);
+
+  useEffect(()=>{
+    console.log('useeffect is running with count dependencies');
+  },[count]);
+
+  return (
+    <>
+      <h1>Count is {count}</h1>
+      <button onClick={()=>setcount(prev=>prev+1)}>Increment</button>
+      <input type="text" value={text} onChange={(e)=>settext(e.target.value)} />
+      <p>{text}</p>
+    </>
+  )
+}
 export default App
