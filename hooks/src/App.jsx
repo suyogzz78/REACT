@@ -84,16 +84,17 @@ const App = () => {
 export default App
 */
 /*
+
 import React, { useState,useEffect } from 'react'
 
 const App = () => {
 
   const[count,setcount]=useState(0);  
-  const[text,settext]=useState('');
+  const[text,settext]=useState(''); 
 
   useEffect(()=>{
     console.log('useeffect is running with  no dependencies')
-  })
+  },[count])
 
   
 return (
@@ -103,13 +104,18 @@ return (
        setcount(prev=>prev+1);
        setcount(prev=>prev+1);
        } }>Increment</button>
-  
+     <br />
+      <input
+        value={text}
+        onChange={e => settext(e.target.value)}
+        placeholder="Type something..."
+      />
   </>
 )
 }
 export default App
-*/
 
+*/
 /*
 import React, { useState,useEffect } from 'react'
 
@@ -130,6 +136,7 @@ const App = () => {
 }
 export default App;
 */
+/*
 import React, { useState,useEffect } from 'react'
 
 const App = () => {
@@ -154,4 +161,20 @@ const App = () => {
     </>
   )
 }
+export default App
+*/
+import React from 'react'
+import Useeffect from './useeffect'
+import Useref from './useref'
+const App = () => {
+  return (
+   <>
+    <h1>Welcome to the App</h1>
+    <Useeffect />
+    <Useref />
+    <p>This is a simple React application demonstrating hooks.</p>
+   </>
+  )
+}
+
 export default App
