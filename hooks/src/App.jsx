@@ -166,12 +166,14 @@ export default App
 import React from 'react'
 import Useeffect from './useeffect'
 import Useref from './useref'
+import Usememohook from './usememohook'
 const App = () => {
   return (
    <>
     <h1>Welcome to the App</h1>
     <Useeffect />
     <Useref />
+    <Usememohook />
     <p>This is a simple React application demonstrating hooks.</p>
    </>
   )
