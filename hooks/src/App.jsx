@@ -167,6 +167,7 @@ import React from 'react'
 import Useeffect from './useeffect'
 import Useref from './useref'
 import Usememohook from './usememohook'
+import Ex1 from './Ex1'
 const App = () => {
   return (
    <>
@@ -174,6 +175,7 @@ const App = () => {
     <Useeffect />
     <Useref />
     <Usememohook />
+    <Ex1 />
     <p>This is a simple React application demonstrating hooks.</p>
    </>
   )
