@@ -163,19 +163,21 @@ const App = () => {
 }
 export default App
 */
-import React from 'react'
+/*
 import Useeffect from './useeffect'
 import Useref from './useref'
 import Usememohook from './usememohook'
 import Ex1 from './Ex1'
+*/
+import React from 'react'
+
+import Usecallback from './usecallback' 
 const App = () => {
   return (
    <>
     <h1>Welcome to the App</h1>
-    <Useeffect />
-    <Useref />
-    <Usememohook />
-    <Ex1 />
+    
+    <Usecallback />
     <p>This is a simple React application demonstrating hooks.</p>
    </>
   )

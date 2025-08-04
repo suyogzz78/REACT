@@ -43,7 +43,7 @@ function Ex1() {
         placeholder="Search product..."
         value={searchTerm}
         onChange={(e) => setSearchTerm(e.target.value)}
-      />
+      /> 
 
       <ul>
         {filteredProducts.map(product => (
