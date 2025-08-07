@@ -21,7 +21,7 @@ function Input({
                     {label}
                 </label>
                 <input
-                    id={amountid}
+                    id={amountid} 
                     className="outline-none w-full bg-transparent py-1.5"
                     type="number"
                     placeholder="Amount"

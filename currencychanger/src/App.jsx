@@ -1,6 +1,6 @@
 import React ,{ useState } from 'react'
 import './App.css'
-import {Input} from './components/Input.jsx'
+import Input from './components/Input.jsx'
 import useCurrencyInfo from './hook/useCurrencyInfo.js'
 
 function App() {
@@ -25,7 +25,7 @@ function App() {
         <div
             className="w-full h-screen flex flex-wrap justify-center items-center bg-cover bg-no-repeat"
             style={{
-                backgroundImage: `url('https://images.pexels.com/photos/3483098/pexels-photo-3483098.jpeg')`,
+                backgroundImage: `url('https://images.pexels.com/photos/259103/pexels-photo-259103.jpeg')`,
             }}
         >
             <div className="w-full">
@@ -64,7 +64,7 @@ function App() {
                                 currencyoptions={options}
                                 selectedcurrency={to}
                                 oncurrencychange={(currency) =>setto(currency)   }
-
+                                onamountchange={(amount)=>setconvertedamount(amount)}
                                 
                             />
                         </div>
