@@ -26,7 +26,7 @@ function App() {
     passRef.current?.select();
     passRef.current?.setSelectionRange(0, 999);
     window.navigator.clipboard.writeText(password)
-  }, [password])
+  }, [password])       
 
 
   useEffect(()=>{{passgen()}},[length,numall,charall,passgen])
@@ -54,7 +54,7 @@ function App() {
           <div className="flex items-center gap-x-1">
             <input
               type="range"
-              min={8}
+              min={10}
               max={100}
               value={length}
               className="cursor-pointer"
