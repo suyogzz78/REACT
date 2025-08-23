@@ -36,6 +36,7 @@ import { githubLoader } from './components/Github/Github.jsx'
   }
  ]
  */
+//we use createBrowserRouter for routing in more optimal way
 
 const router = createBrowserRouter(
   createRoutesFromElements(
