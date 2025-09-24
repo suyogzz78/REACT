@@ -4,6 +4,7 @@ import viteLogo from '/vite.svg'
 import './App.css'
 import UserContextProvider from './Context/UserContextProvider'
 import Login from './components/Login'
+import Profile from './components/Profile'
 
 function App() {
   const [count, setCount] = useState(0)
@@ -12,7 +13,8 @@ function App() {
     <UserContextProvider>
     
      <h1>Suyog donnn</h1>
-     <Login />
+      <Login />
+      <Profile />
     </ UserContextProvider>
   )
 }
