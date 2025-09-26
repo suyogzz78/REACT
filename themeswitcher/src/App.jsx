@@ -7,7 +7,7 @@ function App() {
   const [count, setCount] = useState(0)
 
   return (
-   <div className='text-white p-7 bg-red-500'>SUYOG
+   <div className='text-white p-7 bg-red-500'>SUYOG GAUTAM
       </div>
       
   )
