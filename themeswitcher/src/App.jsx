@@ -13,7 +13,7 @@ function App() {
                     </div>
 
                     <div className="w-full max-w-sm mx-auto">
-                        {/* card ui*/}
+                        {/* card uii*/}
                     </div>
                 </div>
             </div>
