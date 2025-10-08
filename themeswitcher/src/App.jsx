@@ -12,7 +12,7 @@ function App() {
                         {/* Theme switcher button */}
                     </div>
 
-                    <div className="w-full max-w-sm mx-auto">
+                    <div className="w-full max-w-sm mx-auto mb-4">
                         {/* card uii*/}
                     </div>
                 </div>
