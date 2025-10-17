@@ -4,7 +4,7 @@ const initialState = {
   todos: [
     {
       id: 1,
-      title: "Learn Redux Toolkit",
+      title: "Learn Redux Toolkit", 
     }
   ]
 }

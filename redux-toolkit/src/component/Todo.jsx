@@ -1,15 +1,15 @@
 import React from 'react'
 import { useSelector, useDispatch } from 'react-redux'
 import { removeTodo } from '../features/todo/TodoSlice'
-import { Trash2 } from 'lucide-react' // ✅ Delete icon
+import { Trash2 } from 'lucide-react'
 
 function Todo() {
   const todos = useSelector((state) => state.todos)
   const dispatch = useDispatch()
 
   return (
-    <div className="min-h-screen flex justify-center items-center bg-gradient-to-br from-gray-900 to-gray-800">
-      <div className="w-full max-w-md bg-gray-900/80 backdrop-blur-lg border border-gray-700 rounded-2xl p-6 shadow-2xl">
+    <div className="w-screen h-screen flex justify-center items-center bg-gradient-to-br from-gray-900 to-gray-800">
+      <div className="w-full max-w-md bg-gray-900/80 backdrop-blur-lg border border-gray-700 rounded-2xl p-6 shadow-2xl mx-4">
         <h1 className="text-3xl font-bold text-center text-white mb-6 tracking-wide">
           📝 My Todos
         </h1>
