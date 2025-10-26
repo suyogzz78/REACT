@@ -29,6 +29,35 @@ export class AppwriteService {
         }
 
     }
+    async updatePost({title,content,slug,featuredImage,status,userId}){
+        try{
+            return await this.databases.updateDocument(
+                config.appwriteDatabaseId,
+                config.appwriteCollectionId,
+                slug,//slug is document id here
+                {title,
+                content,
+                featuredImage,
+                status,
+                }
+            );
+
+        }catch(error){
+            throw error;
+        }
+    }
+    async deletePost({slug}){
+        try{
+            return await this.databases.deleteDocument(
+                config.appwriteDatabaseId,
+                config.appwriteCollectionId,
+                slug,//slug is document id here
+            );
+            return true;
+        }catch(error){
+            throw error;
+        }return false;
+    }
 }
 const service = new AppwriteService();
  export default service;
