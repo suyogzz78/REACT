@@ -113,18 +113,17 @@ export class AppwriteService {
     return false;
   }
 }
-async deleteFile(fileId){
-    try{
-        await this.bucket.file.delete(
-            config.appwriteBucketId,
-            fileId
-        );
-        return true;
-}
-    catch(error){
-        console.error("Error deleting file:", error);
-        return false;
-    }
+async deleteFile(fileId) {
+  try {
+    await this.bucket.files.delete(
+      config.appwriteBucketId,
+      fileId
+    );
+    return true;
+  } catch (error) {
+    console.error("Error deleting file:", error);
+    return false;
+  }
 }
  async getFilePreview(fileId){
     try{
