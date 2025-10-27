@@ -15,7 +15,7 @@ export class AppwriteService {
     this.bucket = new Storage(this.client);
   }
 
-  // ✅ Create a post document
+ 
   async createPost({ title, content, slug, featuredImage, status, userId }) {
     try {
       const response = await this.databases.documents.create(
@@ -37,7 +37,7 @@ export class AppwriteService {
     }
   }
 
-  // ✅ Update a post document
+  
   async updatePost({ title, content, slug, featuredImage, status }) {
     try {
       const response = await this.databases.documents.update(
@@ -58,8 +58,8 @@ export class AppwriteService {
     }
   }
 
-  // ✅ Delete a post document
-  async deletePost({ slug }) {
+
+  async deletePost({ slug }) {// slug is document ID being used as unique identifier
     try {
       await this.databases.documents.delete(
         config.appwriteDatabaseId,
@@ -72,7 +72,71 @@ export class AppwriteService {
       return false;
     }
   }
+   async getPost({ slug }) {
+    try {
+      await this.databases.documents.get(
+        config.appwriteDatabaseId,
+        config.appwriteCollectionId,
+        slug
+      );
+      return true;
+    } catch (error) {
+      console.error("Error deleting post:", error);
+      return false;
+    }
+  }
+  async getPosts(queries = [Query.equal("status", "active")]) {
+    try {
+      const response = await this.databases.documents.list(
+        config.appwriteDatabaseId,
+        config.appwriteCollectionId,
+        queries,
+
+      );
+      return response.documents;
+    } catch (error) {
+      console.error("Error fetching posts:", error);
+      throw error;
+    }
 }
 
+//file services
+  async uploadFile(file) {
+  try {
+    return await this.bucket.files.create(
+      config.appwriteBucketId,
+      ID.unique(), // auto generate unique ID
+      file
+    );
+  } catch (error) {
+    console.error("Error uploading file:", error);
+    return false;
+  }
+}
+async deleteFile(fileId){
+    try{
+        await this.bucket.file.delete(
+            config.appwriteBucketId,
+            fileId
+        );
+        return true;
+}
+    catch(error){
+        console.error("Error deleting file:", error);
+        return false;
+    }
+}
+ async getFilePreview(fileId){
+    try{
+        return this.bucket.file.getPreview(
+            config.appwriteBucketId,
+            fileId
+        );
+    }catch(error){
+        console.error("Error getting file preview:", error);
+        return null;
+    }           
+}
+}
 const service = new AppwriteService();
 export default service;
