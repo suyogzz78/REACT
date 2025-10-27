@@ -125,16 +125,16 @@ async deleteFile(fileId) {
     return false;
   }
 }
- async getFilePreview(fileId){
-    try{
-        return this.bucket.file.getPreview(
-            config.appwriteBucketId,
-            fileId
-        );
-    }catch(error){
-        console.error("Error getting file preview:", error);
-        return null;
-    }           
+async getFilePreview(fileId) {
+  try {
+    return this.bucket.files.getPreview(
+      config.appwriteBucketId,
+      fileId
+    );
+  } catch (error) {
+    console.error("Error getting file preview:", error);
+    return null;
+  }
 }
 }
 const service = new AppwriteService();
