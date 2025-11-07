@@ -1,13 +1,15 @@
-import { useState } from 'react'
+import { useState,useEffect } from 'react'
 
+import { useDispatch } from 'react-redux';
 
 function App() {
 
-console.log(import.meta.env.VITE_APPWRITE_URL);
-//WE USE PROCESS.ENV TO ACCESS ENVIRONMENT VARIABLES IN REACT
+  const [loading, setLoading] = useState(true);
+  const dispatch = useDispatch();
   return (
   <>
-  <h1>blog app using appwrite</h1>
+  <h1 >blog app using appwrite</h1>
+
   </>
   )
 }
