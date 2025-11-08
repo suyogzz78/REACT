@@ -36,15 +36,21 @@ export class AuthService {
         }
     }
 
+    
     async getCurrentUser() {
-        try {
-            return await this.account.get();
-        } catch (error) {
-            console.log("Appwrite serive :: getCurrentUser :: error", error);
-        }
-
-        return null;
+  try {
+    return await this.account.get();
+  } catch (error) {
+    if (error.code === 401) {
+      // 401 = no valid session, not a real "error"
+      console.log("No active session found — user is logged out.");
+    } else {
+      console.error("Appwrite service :: getCurrentUser :: error", error);
     }
+    return null;
+  }
+}
+
 
     async logout() {
 //logout user
