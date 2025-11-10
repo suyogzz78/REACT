@@ -6,7 +6,7 @@ function Footer() {
   const currentYear = new Date().getFullYear();
 
   return (
-    <footer className="w-full bg-gray-900 text-white py-10 border-t border-gray-700">
+    <footer className="w-full  bg-gray-900 text-white py-10 border-t border-gray-700">
       {/* Centered content */}
       <div className="max-w-7xl mx-auto px-4 flex flex-col md:flex-row justify-between flex-wrap">
 
