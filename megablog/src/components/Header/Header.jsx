@@ -2,6 +2,7 @@ import React from 'react'
 import { useSelector } from 'react-redux';
 import { Link } from 'react-router-dom';
 import {Container,Logo,Logout} from '../index.js'
+import { useNavigate } from 'react-router-dom';
 function Header() {
 
     const authstatus = useSelector((state)=>state.auth.status)//getting auth status from redux store and useselector is used to access the redux store state
@@ -50,6 +51,13 @@ function Header() {
                             item.active ? (
                                 <>
                                 <li key={item.name}>
+                                    <button onClick={()=>
+                                        navigate(item.slug)
+                                    }
+                                    className='inline-block text-white font-bold px-6 py-4 hover:bg-white hover:text-blue-800 rounded-xl'
+                            
+                                    >{item.name}</button>
+
                                     
                                 </li>
                                 
