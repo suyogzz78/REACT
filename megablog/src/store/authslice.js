@@ -3,7 +3,7 @@ import { createSlice } from "@reduxjs/toolkit";
 
 
 const initialState = {
-    status: false,
+    status: false,//uses to track if user is logged in or not here it is used in header component to show different options based on auth status
     userdata: null,
 
 }; 
