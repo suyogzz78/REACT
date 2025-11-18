@@ -31,6 +31,7 @@ function Postform({ post }) {
 
       const uppost = await AppwriteService.updatePost(post.id$, {
         ...data,
+        
         featuredImage: file ? file.$id : undefined,
 
         if(uppost) {
