@@ -12,7 +12,7 @@ function Card({$id,title,featuredImage}) {
             </div>
             </Link>
 
-    )
+     )
 }
 
 export default Card
