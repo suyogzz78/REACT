@@ -5,6 +5,8 @@ import Container from "../container/Container";
 import Logout from "./Header/Logout";
 import Card from "./Card";
 import RTE from "./RTE";
+import Signup from "../Pages/Signup";
+import Postform from "./post-form/Postform";
     export {
         Header,
         Footer,
@@ -12,5 +14,8 @@ import RTE from "./RTE";
         Logo,
         Logout,
         Card,
-        RTE
+        RTE,
+        Signup,
+        Postform
+
     }
