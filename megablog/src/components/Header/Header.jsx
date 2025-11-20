@@ -65,6 +65,11 @@ function Header() {
 
                             ): null
                         )}
+                        {authstatus ?? (
+                            <li>  
+                                <Logout/>  //here it means if authstatus is true then show logout button
+                            </li>
+                        )}
                     </ul>
                 </nav>
 
