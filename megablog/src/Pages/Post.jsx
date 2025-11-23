@@ -1,5 +1,5 @@
 import React from 'react'
-import { AppwriteService } from '../appwrite/service'
+import  AppwriteService  from '../appwrite/service'
 import { useState,useEffect } from 'react'
 import { useNavigate, useParams } from 'react-router-dom'
 import {Button,Container} from "../components/index"
