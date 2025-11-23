@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react'
-import { AppwriteService } from '../appwrite/service';
+import  AppwriteService  from '../appwrite/service';
 import { Container, Card } from '../components';
 
 function AllPost() {
