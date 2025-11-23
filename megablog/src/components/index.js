@@ -7,6 +7,7 @@ import Card from "./Card";
 import RTE from "./RTE";
 import Signup from "../Pages/Signup";
 import Postform from "./post-form/Postform";
+import Authlayout from "./Authlayout"
     export {
         Header,
         Footer,
@@ -16,6 +17,7 @@ import Postform from "./post-form/Postform";
         Card,
         RTE,
         Signup,
-        Postform
+        Postform,
+        Authlayout
 
     }
