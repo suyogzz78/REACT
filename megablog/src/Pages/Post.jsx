@@ -30,13 +30,48 @@ function Post() {
   },[navigate,slug])
 
   const deletePost = ()=>{
-    AppwriteService.getPosts(post.$id).then((status)=>{
+    AppwriteService.deletePost(post.$id).then((status)=>{
+        if (status){
+          AppwriteService.deleteFile(post.featuredImage);
+          navigate("/");
+        }
+    });
+  };
+  return posts ?(
+    <div className='w-full py-8'>
+      <Container>
+          <div className='w-full flex justify-center relative rounded-xl p-2'>
+            <img
+            src={AppwriteService.getFilePreview(posts.featuredImage)}
+            alt={posts.title}
+            className='rounded-xl'
+            />
+       
+          {isauthor && (
+            <div className='absoulte '>
+              <Link to="/edit-post/${post.$id}">
+                <Button bgColor="bg-green-600">
+                  Edit
+                </Button>
+              
+              </Link>
 
-    })
-  }
-  return (
-    <div>Post</div>
-  )
+              <Button bgColor="bg-red-600" onClick={deletePost}>
+                Delete
+              </Button>
+            </div>
+          )}
+          </div>
+          <div className='w-full mb-6'> 
+              <h1 className='text-3xl font-semibold'>{posts.title}</h1>
+
+          </div>
+          <div className='browser-css'>
+            {parse(posts.content)}
+          </div>
+      </Container>
+    </div>
+  ):null
 }
 
 export default Post
