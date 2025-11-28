@@ -8,7 +8,9 @@ import RTE from "./RTE";
 import Signup from "../Pages/Signup";
 import Postform from "./post-form/Postform";
 import Authlayout from "./Authlayout"
-    export {
+import Button from "./Button";
+import Input from './Input'
+    export  {
         Header,
         Footer,
         Container,
@@ -18,6 +20,8 @@ import Authlayout from "./Authlayout"
         RTE,
         Signup,
         Postform,
-        Authlayout
+        Authlayout,
+        Button,
+        Input
 
     }

@@ -7,7 +7,7 @@ const Input = React.forwardRef ( function  Input ( {
     placeholder = "",
     className = "",
     ...props
-}){
+},ref){
     const id = React.useId(); //generating unique id for input field 
     return (
          <>

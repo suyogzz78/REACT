@@ -1,7 +1,7 @@
 import React, { useCallback ,useEffect} from "react";
 import { useContext } from "react";
 import { Button, Input, RTE } from "../index.js";
-import { AppwriteService } from "../../appwrite/service.js";
+import  AppwriteService  from "../../appwrite/service.js";
 import { useNavigate } from "react-router-dom";
 import { useSelector } from "react-redux";
 

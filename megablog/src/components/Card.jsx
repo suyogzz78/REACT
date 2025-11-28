@@ -1,5 +1,5 @@
 import React from 'react'
-import { AppwriteService } from '../appwrite/service'
+import  AppwriteService  from '../appwrite/service'
 import { Link } from 'react-router-dom'
 function Card({$id,title,featuredImage}) {
     return (
