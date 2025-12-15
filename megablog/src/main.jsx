@@ -50,6 +50,7 @@ const router = createBrowserRouter([
           <Authlayout authentication>
             <Editpost />
           </Authlayout>
+          
         ),
       },
       {
