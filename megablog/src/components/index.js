@@ -10,6 +10,7 @@ import Postform from "./post-form/Postform";
 import Authlayout from "./Authlayout"
 import Button from "./Button";
 import Input from './Input'
+import Login from "../Pages/Login";
     export  {
         Header,
         Footer,
@@ -22,6 +23,7 @@ import Input from './Input'
         Postform,
         Authlayout,
         Button,
-        Input
+        Input,
+        Login
 
     }
